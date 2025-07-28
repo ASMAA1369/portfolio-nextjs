@@ -1,9 +1,10 @@
 import Image from "next/image";
+import '../styles/background.css';  // <-- Import du CSS dynamique
 
 export default function Home() {
   return (
-    <div className="text-center max-w-3xl mx-auto">
-      <h1 className="text-4xl font-bold text-red-600 mb-6">
+    <main className="dynamic-bg min-h-screen flex flex-col items-center justify-center text-white text-center max-w-3xl mx-auto p-6">
+      <h1 className="text-4xl font-bold text-red-400 mb-6">
         Bienvenue sur mon portfolio !
       </h1>
       <Image
@@ -13,9 +14,24 @@ export default function Home() {
         height={200}
         className="rounded-full mx-auto mb-6"
       />
-      <p className="text-lg mb-6">
-        Je suis développeuse web, passionnée par le développement frontend et backend.
-      </p>
-    </div>
+      <div className="text-lg mb-6 max-w-md space-y-4">
+  <p>
+    Je suis développeuse curieuse et passionnée par le monde du développement web,
+    spécialisée dans la création d’applications performantes et intuitives.
+  </p>
+  <p>
+    J’aime concevoir des interfaces modernes côté frontend et développer des
+    fonctionnalités robustes côté backend, en veillant toujours à offrir une
+    expérience utilisateur optimale.
+    Mon expertise couvre les technologies modernes telles que React, Next.js,
+    et Tailwind CSS pour le frontend, ainsi que Node.js et Express pour le backend.
+    Mon objectif est de transformer des idées en solutions digitales élégantes et efficaces.
+  </p>
+  <p>
+    Chaque projet est pour moi une opportunité d’allier créativité, performance et
+    expérience utilisateur.
+  </p>
+</div>
+    </main>
   );
 }
